@@ -5,40 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#99d0c8"
-    tools:context=".AdminChooseActivity">
+    tools:context=".AdminRetrieveActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/bt_admchs_edtdet"
+                android:id="@+id/bt_adminRetrieve_retrive"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="28dp"
                 android:background="@drawable/sign_in_button"
                 android:padding="15dp"
-                android:text="EDIT USER DETAILS"
+                android:text="Get patient details"
                 android:textColor="#fff"
-                android:onClick="updateDetails"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-
+            <ListView
+                android:id="@+id/lv_adminRetrieve_list"
+                android:layout_width="395dp"
+                android:layout_height="638dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

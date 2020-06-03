@@ -1,38 +1,51 @@
 package com.example.covid_19demo;
 
 public class Diet {
-    private String pref1, pref2, pref3;
+    private String breakfast, lunch, snack, dinner;
 
     public Diet(){
+
     }
 
-    public Diet(String pref1, String pref2, String pref3) {
-        this.pref1 = pref1;
-        this.pref2=pref2;
-        this.pref3=pref3;
+    public Diet(String breakfast, String lunch, String snack, String dinner) {
+        this.breakfast = breakfast;
+        this.lunch = lunch;
+        this.snack = snack;
+        this.dinner = dinner;
     }
 
-    public String getPref1() {
-        return pref1;
+    public String getBreakfast() {
+        return breakfast;
     }
 
-    public void setPref1(String pref1) {
-        this.pref1 = pref1;
+    public void setBreakfast(String breakfast) {
+        this.breakfast = breakfast;
     }
 
-    public String getPref2() {
-        return pref2;
+    public String getLunch() {
+        return lunch;
     }
 
-    public void setPref2(String pref2) {
-        this.pref2 = pref2;
+    public void setLunch(String lunch) {
+        this.lunch = lunch;
     }
 
-    public String getPref3() {
-        return pref3;
+    public String getSnack() {
+        return snack;
     }
 
-    public void setPref3(String pref3) {
-        this.pref3 = pref3;
+    public void setSnack(String snack) {
+        this.snack = snack;
+    }
+
+    public String getDinner() {
+        return dinner;
+    }
+
+    public void setDinner(String dinner) {
+        this.dinner = dinner;
+    }
+
+    public void getBreakfast(String breakfast) {
     }
 }

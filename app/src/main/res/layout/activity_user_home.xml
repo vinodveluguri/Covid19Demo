@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#99d0c8"
-    tools:context=".AdminChooseActivity">
+    tools:context=".UserHomeActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -24,20 +24,15 @@
             android:padding="20dp">
 
             <Button
-                android:id="@+id/bt_admchs_edtdet"
+                android:id="@+id/bt_user_home_plan"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/sign_in_button"
-                android:padding="15dp"
-                android:text="EDIT USER DETAILS"
+                android:text="View Diet Plan"
                 android:textColor="#fff"
-                android:onClick="updateDetails"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-
-
+                android:background="@drawable/sign_in_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
     </ScrollView>
 

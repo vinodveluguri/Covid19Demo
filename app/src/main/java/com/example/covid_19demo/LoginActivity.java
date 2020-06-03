@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(this, new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                startActivity(new Intent(LoginActivity.this,PatientDetailsActivity.class));/*HomeActivity*/
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

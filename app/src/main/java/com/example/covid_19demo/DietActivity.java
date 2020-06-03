@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -15,6 +16,8 @@ public class DietActivity extends AppCompatActivity {
     Spinner spinner;
     ArrayList<String> arrayList;
     ArrayAdapter<String> arrayAdapter;
+    Button btn_go;
+    String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,8 @@ public class DietActivity extends AppCompatActivity {
         setContentView(R.layout.activity_diet);
 
         spinner = findViewById(R.id.spinner);
-        arrayList=new ArrayList<String>();
+        btn_go = findViewById(R.id.bt_diet_Go);
+        arrayList = new ArrayList<String>();
         arrayList.add("Select option");
         arrayList.add("Monday");
         arrayList.add("Tuesday");
@@ -31,48 +35,56 @@ public class DietActivity extends AppCompatActivity {
         arrayList.add("Friday");
         arrayList.add("Saturday");
         arrayList.add("Sunday");
-        arrayAdapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,arrayList);
+        arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, arrayList);
         spinner.setAdapter(arrayAdapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, final int i, long l) {
-                String data = (String) spinner.getItemAtPosition(i);
-                Intent intent = new Intent(DietActivity.this, UpdateDietActivity.class);
-                if (data.equals("Monday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
-                if (data.equals("Tuesday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
-                if (data.equals("Wednesday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
-                if (data.equals("Thursday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
-                if (data.equals("Friday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
-                if (data.equals("Saturday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
-                if (data.equals("Sunday")) {
-                    intent.putExtra("key",data);
-                    startActivity(intent);
-                }
+              data = (String) spinner.getItemAtPosition(i);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
-
+        btn_go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DietActivity.this, UpdateDietActivity.class);
+                intent.putExtra("selectDay",data);
+                startActivity(intent);
+               /* if (data.equals("Monday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }
+                if (data.equals("Tuesday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }
+                if (data.equals("Wednesday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }
+                if (data.equals("Thursday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }
+                if (data.equals("Friday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }
+                if (data.equals("Saturday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }
+                if (data.equals("Sunday")) {
+                    intent.putExtra("key", data);
+                    startActivity(intent);
+                }*/
+            }
+        });
     }
 }
+

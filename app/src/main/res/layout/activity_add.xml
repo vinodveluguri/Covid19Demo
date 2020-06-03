@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#99d0c8"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        tools:ignore="ScrollViewSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+
+            <ImageView
+                android:id="@+id/iv_add_back"
+                android:layout_width="55dp"
+                android:layout_height="67dp"
+                android:background="#99d0c8"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Add Patient Details"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="35dp"/>
+        </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_add_PName"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="70sp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30sp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/et_user_pwd"
+                android:ems="10"
+                android:hint=" Enter patient name "
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/et_add_Phnnum"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="70sp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/et_user_pwd"
+                android:ems="10"
+                android:hint=" Enter phone number "
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_add_joined"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="70sp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/et_user_pwd"
+                android:ems="10"
+                android:hint=" Joined at "
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="70sp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:gravity="center"
+                android:text=" Enter the joined date "
+                android:textColor="#0c0c0c"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/et_add_date"
+                    android:layout_width="10dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_user_pwd"
+                    android:gravity="center"
+                    android:hint=" date "
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/et_add_month"
+                    android:layout_width="10dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_user_pwd"
+                    android:gravity="center"
+                    android:hint=" month "
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/et_add_year"
+                    android:layout_width="10dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_user_pwd"
+                    android:gravity="center"
+                    android:hint=" year "
+                    android:inputType="textPersonName"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70sp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginRight="100dp"
+                    android:gravity="center"
+                    android:text=" COVID-19 test result "
+                    android:textStyle="bold"
+                    android:textColor="#0c0c0c"
+                    tools:ignore="DuplicateIds" />
+
+                <EditText
+                    android:id="@+id/et_add_pos_neg"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="70sp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/et_user_pwd"
+                    android:ems="10"
+                    android:hint=" Positive / Negative "
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/bt_add_submit"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="70sp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/sign_in_button"
+                    android:text="SUBMIT"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView >

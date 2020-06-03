@@ -24,14 +24,14 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DIET"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DIET"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -49,6 +49,18 @@
             android:layout_width="132dp"
             android:layout_height="37dp"
             android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/bt_diet_Go"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/sign_in_button"
+            android:padding="15dp"
+            android:text="GO!"
+            android:textColor="#fff"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
     </ScrollView>
 

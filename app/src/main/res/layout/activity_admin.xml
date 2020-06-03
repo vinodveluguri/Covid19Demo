@@ -47,6 +47,18 @@
             android:textColor="#fff"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <Button
+            android:id="@+id/bt_admin_updiet"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/sign_in_button"
+            android:padding="15dp"
+            android:text="UPDATE DIET"
+            android:textColor="#fff"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
