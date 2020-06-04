@@ -20,14 +20,16 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button bt_user_signIn;
     private TextView tv_user_signUp;
-    private EditText et_mail, et_pass;
+    private EditText et_mail, et_pass, et_name;
     private FirebaseAuth mAuth;
+    String ename;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        et_name = findViewById(R.id.et_login_ename);
         bt_user_signIn =findViewById(R.id.bt_login_signIn);
         tv_user_signUp = findViewById(R.id.tv_main_login);
         et_mail =findViewById(R.id.et_login_username);
@@ -38,12 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         bt_user_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ename = et_name.getText().toString();
                 String email = et_mail.getText().toString();
                 String password = et_pass.getText().toString();
 
-                if(email.equals("admin@gmail.com") && password.equals("admin123")){
-                    startActivity(new Intent(LoginActivity.this,AdminActivity.class));
-                }
+
                 if (validate(email, et_mail)&&validate(password,et_pass)){
                     loginUser(email, password);
                 }
@@ -58,11 +59,17 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void loginUser(String email, String password) {
+    private void loginUser(final String email, final String password) {
         mAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(this, new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                startActivity(new Intent(LoginActivity.this,PatientDetailsActivity.class));/*HomeActivity*/
+                if (email.equals("admin@gmail.com") && password.equals("admin123")) {
+                    startActivity(new Intent(LoginActivity.this, AdminActivity.class));
+                } else {
+                    Intent intent = new Intent(LoginActivity.this, PatientDetailsActivity.class);
+                    intent.putExtra("key",ename);
+                    startActivity(intent);/*HomeActivity*/
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

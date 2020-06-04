@@ -8,15 +8,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 public class DietActivity extends AppCompatActivity {
-    Spinner spinner;
-    ArrayList<String> arrayList;
-    ArrayAdapter<String> arrayAdapter;
-    Button btn_go;
+    private Spinner spinner;
+    private ArrayList<String> arrayList;
+    private ArrayAdapter<String> arrayAdapter;
+    private Button btn_go;
+    private ImageView img_back;
     String data;
 
     @Override
@@ -26,6 +28,8 @@ public class DietActivity extends AppCompatActivity {
 
         spinner = findViewById(R.id.spinner);
         btn_go = findViewById(R.id.bt_diet_Go);
+        img_back = findViewById(R.id.iv_diet_back);
+
         arrayList = new ArrayList<String>();
         arrayList.add("Select option");
         arrayList.add("Monday");
@@ -55,34 +59,14 @@ public class DietActivity extends AppCompatActivity {
                 Intent intent = new Intent(DietActivity.this, UpdateDietActivity.class);
                 intent.putExtra("selectDay",data);
                 startActivity(intent);
-               /* if (data.equals("Monday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }
-                if (data.equals("Tuesday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }
-                if (data.equals("Wednesday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }
-                if (data.equals("Thursday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }
-                if (data.equals("Friday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }
-                if (data.equals("Saturday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }
-                if (data.equals("Sunday")) {
-                    intent.putExtra("key", data);
-                    startActivity(intent);
-                }*/
+                finish();
+            }
+        });
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DietActivity.this,AdminActivity.class));
             }
         });
     }

@@ -38,12 +38,10 @@ public class AdminEditDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = et_name.getText().toString();
-                //String phnnum = et_phnnum.getText().toString();
-
                 String result = et_res.getText().toString();
+
                 String uid = FirebaseAuth.getInstance().getUid();
                 updateDetails(name, result);
-
             }
         });
     }

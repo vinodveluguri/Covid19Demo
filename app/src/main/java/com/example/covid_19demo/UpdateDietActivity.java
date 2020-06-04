@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +30,7 @@ public class UpdateDietActivity extends AppCompatActivity {
     private EditText et_breakfast,et_lunch, et_snack, et_dinner;
     public String breakfast, lunch, snack, dinner;
     private Button btn_add;
+    private ImageView img_back;
     String sm;
 
     @Override
@@ -39,6 +44,7 @@ public class UpdateDietActivity extends AppCompatActivity {
         et_snack =findViewById(R.id.et_UD_SNK);
         et_dinner = findViewById(R.id.et_UD_DIN);
         btn_add = findViewById(R.id.bt_UD_update);
+        img_back = findViewById(R.id.iv_UD_back);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -59,6 +65,13 @@ public class UpdateDietActivity extends AppCompatActivity {
                 myRef.child(sm).setValue(diet);
                 updateDetails(breakfast, lunch,snack,dinner);
 
+            }
+        });
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UpdateDietActivity.this,DietActivity.class));
             }
         });
     }
@@ -86,6 +99,25 @@ public class UpdateDietActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.signup_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.signout_item){
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(UpdateDietActivity.this,LoginActivity.class));
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+
+
 
 
