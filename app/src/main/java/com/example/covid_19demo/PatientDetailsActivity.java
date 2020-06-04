@@ -25,7 +25,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_patient_details);
 
         tv_name = findViewById(R.id.tv_PD_patient_name);
         tv_phnum = findViewById(R.id.tv_PD_patient_phnnum);
@@ -34,7 +34,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
 
         Intent it = getIntent();
         String s = it.getStringExtra("key");
-        myRef = FirebaseDatabase.getInstance().getReference().child("patients");
+        myRef = FirebaseDatabase.getInstance().getReference().child("Patients");
 
         myRef.child(s).addValueEventListener(new ValueEventListener() {
             @Override
@@ -46,7 +46,6 @@ public class PatientDetailsActivity extends AppCompatActivity {
                 tv_name.setText(name);
                 tv_phnum.setText(phone);
                 tv_res.setText(res);
-
             }
 
             @Override

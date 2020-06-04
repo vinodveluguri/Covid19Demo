@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddActivity extends AppCompatActivity {
 
-    private EditText et_pname,et_pnnum,et_join,et_date,et_month,et_year,et_posneg;
+    private EditText et_pname,et_pnnum,et_join,et_date,et_month,et_year,et_posneg, et_mail;
     private Button bt_submit;
     private ImageView img_back;
     String con = " ";
@@ -28,7 +28,6 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-
         img_back = findViewById(R.id.iv_add_back);
         et_pname = findViewById(R.id.et_add_PName);
         et_pnnum = findViewById(R.id.et_add_Phnnum);
@@ -37,6 +36,7 @@ public class AddActivity extends AppCompatActivity {
         et_month = findViewById(R.id.et_add_month);
         et_year = findViewById(R.id.et_add_year);
         et_posneg = findViewById(R.id.et_add_pos_neg);
+        et_mail = findViewById(R.id.et_add_email);
         bt_submit = findViewById(R.id.bt_add_submit);
         db = FirebaseDatabase.getInstance();
         myRef = db.getReference("Patients");
@@ -51,12 +51,14 @@ public class AddActivity extends AppCompatActivity {
                 String month = et_month.getText().toString();
                 String year = et_year.getText().toString();
                 String res = et_posneg.getText().toString();
+                String mail = et_mail.getText().toString();
 
-                if (name.equals(con) || phone.equals(con) || join.equals(con) || date.equals(con) || month.equals(con) || year.equals(con) || res.equals(con)) {
+                if (name.equals(con) || phone.equals(con) || join.equals(con) || date.equals(con) || month.equals(con) || year.equals(con) || res.equals(con) || mail.equals(con)) {
                     Toast.makeText(getApplicationContext(),"FILL THE TEXT FIELDS TO STORE THE DATA",Toast.LENGTH_LONG).show();
                 }
                 else {
                     Patients pat = new Patients();
+                    pat.setMail(mail);
                     pat.setName(name);
                     pat.setPhone(phone);
                     pat.setJoin(join);
@@ -65,7 +67,8 @@ public class AddActivity extends AppCompatActivity {
                     pat.setYear(year);
                     pat.setRes(res);
 
-                    myRef.child(myRef.push().getKey()).setValue(pat);
+                    //myRef.child(myRef.push().getKey()).setValue(pat);
+                    myRef.child(name).setValue(pat);
                     Toast.makeText(getApplicationContext(), "Stored Succesfully", Toast.LENGTH_LONG).show();
                 }
             }

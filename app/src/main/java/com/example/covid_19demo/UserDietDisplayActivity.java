@@ -87,7 +87,7 @@ public class UserDietDisplayActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.signout_item){
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(UserDietDisplayActivity.this,LoginActivity.class));
+            startActivity(new Intent(UserDietDisplayActivity.this,User1Activity.class));
             finish();
         }
         return super.onOptionsItemSelected(item);

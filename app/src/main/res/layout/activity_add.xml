@@ -50,44 +50,58 @@
             <EditText
                 android:id="@+id/et_add_PName"
                 android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="70sp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30sp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginRight="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/et_user_pwd"
                 android:ems="10"
-                android:hint=" Enter patient name "
-                android:inputType="textPersonName"/>
+                android:hint="Patient Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#9a9a9a"
+                android:textColorHint="#9a9a9a"/>
+
+            <EditText
+                android:id="@+id/et_add_email"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_user_pwd"
+                android:ems="10"
+                android:hint="Enter Mail"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#9a9a9a"
+                android:textColorHint="#9a9a9a"/>
 
             <EditText
                 android:id="@+id/et_add_Phnnum"
                 android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="70sp"
-                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginRight="100dp"
                 android:background="@drawable/et_user_pwd"
                 android:ems="10"
-                android:hint=" Enter phone number "
-                android:inputType="textPersonName" />
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#9a9a9a"
+                android:textColorHint="#9a9a9a"/>
 
             <EditText
                 android:id="@+id/et_add_joined"
                 android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="70sp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10sp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginRight="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/et_user_pwd"
                 android:ems="10"
-                android:hint=" Joined at "
-                android:inputType="textPersonName" />
+                android:hint="Joined At"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#9a9a9a"
+                android:textColorHint="#9a9a9a" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -120,7 +134,9 @@
                     android:background="@drawable/et_user_pwd"
                     android:gravity="center"
                     android:hint=" date "
-                    android:inputType="textPersonName" />
+                    android:textColor="#9a9a9a"
+                    android:textColorHint="#9a9a9a"
+                    android:inputType="number" />
 
                 <EditText
                     android:id="@+id/et_add_month"
@@ -132,7 +148,9 @@
                     android:background="@drawable/et_user_pwd"
                     android:gravity="center"
                     android:hint=" month "
-                    android:inputType="textPersonName" />
+                    android:textColor="#9a9a9a"
+                    android:textColorHint="#9a9a9a"
+                    android:inputType="number" />
 
                 <EditText
                     android:id="@+id/et_add_year"
@@ -144,7 +162,9 @@
                     android:background="@drawable/et_user_pwd"
                     android:gravity="center"
                     android:hint=" year "
-                    android:inputType="textPersonName"
+                    android:textColor="#9a9a9a"
+                    android:textColorHint="#9a9a9a"
+                    android:inputType="number"
                     />
             </LinearLayout>
 
@@ -173,13 +193,15 @@
                     android:id="@+id/et_add_pos_neg"
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="70sp"
+                    android:layout_marginStart="50sp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginEnd="100dp"
                     android:layout_marginRight="100dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/et_user_pwd"
                     android:ems="10"
+                    android:textColor="#9a9a9a"
+                    android:textColorHint="#9a9a9a"
                     android:hint=" Positive / Negative "
                     android:inputType="textPersonName" />
 
@@ -187,7 +209,7 @@
                     android:id="@+id/bt_add_submit"
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="70sp"
+                    android:layout_marginStart="50dp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="100dp"

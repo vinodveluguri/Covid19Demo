@@ -1,7 +1,14 @@
 package com.example.covid_19demo;
 
 public class Patients {
-        String name,phone,join,date,month,year,res;
+        String name;
+    String phone;
+    String join;
+    String date;
+    String month;
+    String year;
+    String res;
+    String mail;
 
         public Patients(){
 
@@ -68,4 +75,12 @@ public class Patients {
         public void setRes(String res) {
             this.res = res;
         }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 }
