@@ -87,6 +87,7 @@ public class UpdateDietActivity extends AppCompatActivity {
                         diet.setSnack(snack);
                         diet.setDinner(dinner);
                         myRef.child(i.getKey()).setValue(diet);
+                        Toast.makeText(getApplicationContext(),"Updated Successfully",Toast.LENGTH_SHORT).show();
                         break;
 
                     }

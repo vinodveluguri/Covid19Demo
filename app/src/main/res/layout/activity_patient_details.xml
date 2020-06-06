@@ -123,31 +123,6 @@
                     android:textSize="20dp" />
             </LinearLayout>
 
-            <!--<LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/tv_PD_join_date"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:text="Join Date :"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/tv_PD_patient_joinedDate"
-                    android:layout_width="210dp"
-                    android:layout_height="wrap_content"
-                    android:text=" "
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:textSize="20dp" />
-            </LinearLayout>
--->
             <Button
                 android:id="@+id/bt_PD_view_diet"
                 android:layout_width="250dp"
@@ -160,6 +135,70 @@
                 android:textColor="#fff"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <!-- <TextView
+                 android:layout_width="250dp"
+                 android:layout_height="20dp"
+                 android:layout_marginStart="50sp"
+                 android:layout_marginLeft="50dp"
+                 android:layout_marginTop="20sp"
+                 android:layout_marginEnd="100dp"
+                 android:layout_marginRight="100dp"
+                 android:gravity="center"
+                 android:text=" Enter today's date "
+                 android:textColor="#0c0c0c"
+                 android:textStyle="bold" />
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal"
+                 tools:ignore="UselessParent">
+
+                 <EditText
+                     android:id="@+id/et_PD_date"
+                     android:layout_width="10dp"
+                     android:layout_height="40dp"
+                     android:layout_marginLeft="10sp"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:background="@drawable/et_user_pwd"
+                     android:gravity="center"
+                     android:hint=" date "
+                     android:textColor="#9a9a9a"
+                     android:textColorHint="#9a9a9a"
+                     android:inputType="number" />
+
+                 <EditText
+                     android:id="@+id/et_PD_month"
+                     android:layout_width="10dp"
+                     android:layout_height="40dp"
+                     android:layout_marginLeft="10sp"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:background="@drawable/et_user_pwd"
+                     android:gravity="center"
+                     android:hint=" month "
+                     android:textColor="#9a9a9a"
+                     android:textColorHint="#9a9a9a"
+                     android:inputType="number" />
+
+                 <EditText
+                     android:id="@+id/et_PD_year"
+                     android:layout_width="10dp"
+                     android:layout_height="40dp"
+                     android:layout_marginLeft="10sp"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:background="@drawable/et_user_pwd"
+                     android:gravity="center"
+                     android:hint=" year "
+                     android:textColor="#9a9a9a"
+                     android:textColorHint="#9a9a9a"
+                     android:inputType="number"
+                     />
+             </LinearLayout> -->
+
             <Button
                 android:id="@+id/bt_PD_view_days_left"
                 android:layout_width="250dp"
@@ -168,7 +207,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/transbutton"
                 android:padding="15dp"
-                android:text="How many days Left"
+                android:text="Number of cases"
                 android:textColor="#000"
                 app:layout_constraintStart_toStartOf="parent" />
 

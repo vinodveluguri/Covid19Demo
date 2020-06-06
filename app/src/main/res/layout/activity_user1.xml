@@ -91,16 +91,52 @@
             android:textColor="#fff"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
-            android:text="Register"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textSize="19sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="167dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:text="Don't have an Account ?"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REGISTER"
+                android:textAlignment="center"
+                android:textColor="#00d900"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_add_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="50dp"
+                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+            <TextView
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Admin need not enter Patient Name"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="12sp" />
+        </LinearLayout>
 
     </LinearLayout>
     </ScrollView>

@@ -41,7 +41,7 @@ public class UserDietDisplayActivity extends AppCompatActivity {
         tv_snk = findViewById(R.id.tv_UDDis_getSnack);
         tv_din = findViewById(R.id.tv_UDDis_getDinner);
 
-       sm = getIntent().getStringExtra("selectDay");
+        sm = getIntent().getStringExtra("selectDay");
         myRef = FirebaseDatabase.getInstance().getReference("Diet");
         tv_day.setText(sm);
 
