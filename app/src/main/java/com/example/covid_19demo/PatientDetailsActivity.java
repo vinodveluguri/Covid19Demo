@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,8 +27,6 @@ public class PatientDetailsActivity extends AppCompatActivity {
     private Button bt_diet, btn_cases,bt_search;
     private DatabaseReference myRef;
     String s;
-    //private EditText et_date, et_mon, et_year;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,5 +107,23 @@ public class PatientDetailsActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.signup_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.signout_item){
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(PatientDetailsActivity.this,User1Activity.class));
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
