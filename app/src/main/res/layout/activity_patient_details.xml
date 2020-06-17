@@ -11,8 +11,9 @@
         android:id="@+id/scrollView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -22,30 +23,50 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/tv_PD_head"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="WELCOME "
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textSize="30dp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_PD_head"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="95dp"
+                    android:text="WELCOME "
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_PD_user_name"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text=" "
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_searchname"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/et_user_pwd"
+                android:ems="10"
+                android:hint="Search for Patient Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#9a9a9a"
+                android:textColorHint="#9a9a9a"
+                />
+
+            <Button
+                android:id="@+id/bt_search"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/sign_in_button"
+                android:text="SEARCH"
                 android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="25dp" />
-        </LinearLayout>
+                />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -56,11 +77,10 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:layout_marginStart="50dp"
                     android:text="Name :"
                     android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:textSize="22dp" />
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_PD_patient_name"
@@ -68,9 +88,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text=" "
-                    android:textColor="#fff"
-                    android:textStyle="italic"
-                    android:textSize="20dp" />
+                    android:textColor="#0c0c0c"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <LinearLayout
@@ -82,20 +102,19 @@
                     android:id="@+id/tv_PD_Phnnum"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
                     android:text="Phone no.:"
                     android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:textSize="22dp" />
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_PD_patient_phnnum"
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:text=" "
-                    android:textColor="#fff"
-                    android:textStyle="italic"
-                    android:textSize="20dp" />
+                    android:textColor="#0c0c0c"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <LinearLayout
@@ -107,33 +126,20 @@
                     android:id="@+id/tv_PD_result"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
                     android:text="Result :"
                     android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:textSize="22dp" />
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_PD_patient_result"
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:text=" "
-                    android:textColor="#fff"
-                    android:textStyle="italic"
-                    android:textSize="20dp" />
+                    android:textColor="#0c0c0c"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/bt_PD_view_diet"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/sign_in_button"
-                android:padding="15dp"
-                android:text="View Diet"
-                android:textColor="#fff"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <!-- <TextView
                  android:layout_width="250dp"
@@ -147,14 +153,11 @@
                  android:text=" Enter today's date "
                  android:textColor="#0c0c0c"
                  android:textStyle="bold" />
-
-
              <LinearLayout
                  android:layout_width="match_parent"
                  android:layout_height="match_parent"
                  android:orientation="horizontal"
                  tools:ignore="UselessParent">
-
                  <EditText
                      android:id="@+id/et_PD_date"
                      android:layout_width="10dp"
@@ -168,7 +171,6 @@
                      android:textColor="#9a9a9a"
                      android:textColorHint="#9a9a9a"
                      android:inputType="number" />
-
                  <EditText
                      android:id="@+id/et_PD_month"
                      android:layout_width="10dp"
@@ -182,7 +184,6 @@
                      android:textColor="#9a9a9a"
                      android:textColorHint="#9a9a9a"
                      android:inputType="number" />
-
                  <EditText
                      android:id="@+id/et_PD_year"
                      android:layout_width="10dp"
@@ -200,15 +201,27 @@
              </LinearLayout> -->
 
             <Button
+                android:id="@+id/bt_PD_view_diet"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/sign_in_button"
+                android:padding="15dp"
+                android:text="View Diet"
+                android:textColor="#fff"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
                 android:id="@+id/bt_PD_view_days_left"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/transbutton"
+                android:background="@drawable/sign_in_button"
                 android:padding="15dp"
                 android:text="Number of cases"
-                android:textColor="#000"
+                android:textColor="#fff"
                 app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>

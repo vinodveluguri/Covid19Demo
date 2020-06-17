@@ -24,7 +24,6 @@ import com.google.firebase.database.ValueEventListener;
 public class UserDietDisplayActivity extends AppCompatActivity {
 
     private TextView tv_day;
-    private ImageView imgback;
     private DatabaseReference myRef;
     private TextView tv_bf, tv_lun, tv_snk, tv_din;
     String sm;
@@ -35,7 +34,6 @@ public class UserDietDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_diet_display);
 
         tv_day = findViewById(R.id.tv_UDDis_key);
-        imgback = findViewById(R.id.iv_UDDis_back);
         tv_bf = findViewById(R.id.tv_UDDis_getBf);
         tv_lun = findViewById(R.id.tv_UDDis_getlunch);
         tv_snk = findViewById(R.id.tv_UDDis_getSnack);
@@ -63,13 +61,6 @@ public class UserDietDisplayActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
-
-        imgback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(UserDietDisplayActivity.this,UserDietDayActivity.class));
             }
         });
 

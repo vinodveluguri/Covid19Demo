@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class User1Activity extends AppCompatActivity {
 
-    private EditText et1,et2,ename;
+    private EditText et1,et2;
     private Button bt2;
     private TextView tv3;
     String email,password,ename1;
@@ -29,7 +29,6 @@ public class User1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user1);
 
-        ename = findViewById(R.id.editText20);
         et1 = findViewById(R.id.editText);
         et2 = findViewById(R.id.editText2);
         bt2 = findViewById(R.id.button2);//login
@@ -40,7 +39,6 @@ public class User1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                ename1 = ename.getText().toString().trim();
                 email=et1.getText().toString().trim();
                 password=et2.getText().toString().trim();
 
@@ -72,7 +70,6 @@ public class User1Activity extends AppCompatActivity {
                 else {
                     Toast.makeText(getApplicationContext()," WELCOME ",Toast.LENGTH_LONG).show();
                     Intent it = new Intent(User1Activity.this, PatientDetailsActivity.class);
-                    it.putExtra("key",ename1);
                     startActivity(it);
                 }
 

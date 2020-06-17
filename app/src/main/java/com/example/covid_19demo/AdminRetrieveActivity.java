@@ -47,7 +47,9 @@ public class AdminRetrieveActivity extends AppCompatActivity {
                 arrayList = new ArrayList<String>();
                 for (DataSnapshot i : dataSnapshot.getChildren()) {
                     Patients patients = i.getValue(Patients.class);
-                    arrayList.add(patients.getName());
+                    String data = patients.getName()+"\n"+patients.getRes();
+                    arrayList.add(data);
+                    //arrayList.add(patients.getName());
                 }
             }
             @Override
@@ -63,12 +65,14 @@ public class AdminRetrieveActivity extends AppCompatActivity {
             }
         });
 
-    lv_Details.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-           @Override
-           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(AdminRetrieveActivity.this,AdminChooseActivity.class);
-                startActivity(intent);
+        lv_Details.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent it = new Intent(AdminRetrieveActivity.this,AdminEditDetailsActivity.class);
+                startActivity(it);
             }
+
         });
 
     }

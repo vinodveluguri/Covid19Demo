@@ -19,7 +19,6 @@ public class UserCasesActivity extends AppCompatActivity {
     private Button btn_find;
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> arrayAdapter;
-    private ImageView img_back;
     String data;
 
     @Override
@@ -29,7 +28,6 @@ public class UserCasesActivity extends AppCompatActivity {
 
         spinner = findViewById(R.id.sp_state);
         btn_find = findViewById(R.id.bt_UC_Go);
-        img_back =findViewById(R.id.iv_UC_back);
 
         arrayList = new ArrayList<String>();
         arrayList.add("Select option");
@@ -86,14 +84,5 @@ public class UserCasesActivity extends AppCompatActivity {
             }
         });
 
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(UserCasesActivity.this,PatientDetailsActivity.class));
-            }
-        });
     }
-
-
 }
-

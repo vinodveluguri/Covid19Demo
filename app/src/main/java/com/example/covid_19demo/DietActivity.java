@@ -18,7 +18,6 @@ public class DietActivity extends AppCompatActivity {
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> arrayAdapter;
     private Button btn_go;
-    private ImageView img_back;
     String data;
 
     @Override
@@ -28,7 +27,6 @@ public class DietActivity extends AppCompatActivity {
 
         spinner = findViewById(R.id.spinner);
         btn_go = findViewById(R.id.bt_diet_Go);
-        img_back = findViewById(R.id.iv_diet_back);
 
         arrayList = new ArrayList<String>();
         arrayList.add("Select option");
@@ -45,7 +43,7 @@ public class DietActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, final int i, long l) {
-              data = (String) spinner.getItemAtPosition(i);
+                data = (String) spinner.getItemAtPosition(i);
 
             }
             @Override
@@ -63,12 +61,5 @@ public class DietActivity extends AppCompatActivity {
             }
         });
 
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DietActivity.this,AdminActivity.class));
-            }
-        });
     }
 }
-

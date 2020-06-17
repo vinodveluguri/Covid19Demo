@@ -19,7 +19,6 @@ public class UserCasesDisplayActivity extends AppCompatActivity {
 
     private TextView tv_pos, tv_rec, tv_dead;
     private TextView tv_state;
-    private ImageView imgback;
     private DatabaseReference myRef;
     String sm;
 
@@ -32,7 +31,6 @@ public class UserCasesDisplayActivity extends AppCompatActivity {
         tv_rec = findViewById(R.id.tv_UCD_reco);
         tv_dead = findViewById(R.id.tv_UCD_death);
         tv_state = findViewById(R.id.tv_UCD_key);
-        imgback = findViewById(R.id.iv_UCD_back);
 
         sm = getIntent().getStringExtra("selectDay");
         myRef = FirebaseDatabase.getInstance().getReference("Cases");
@@ -58,13 +56,7 @@ public class UserCasesDisplayActivity extends AppCompatActivity {
             }
         });
 
-        imgback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(UserCasesDisplayActivity.this,UserCasesActivity.class));
-            }
-        });
 
     }
-}
 
+}

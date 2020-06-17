@@ -19,7 +19,6 @@ public class AdminStateActivity extends AppCompatActivity {
     private Button btn_go;
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> arrayAdapter;
-    private ImageView img_back;
     String data;
 
 
@@ -30,7 +29,6 @@ public class AdminStateActivity extends AppCompatActivity {
 
         spinner = findViewById(R.id.sp_state);
         btn_go = findViewById(R.id.bt_AS_Go);
-        img_back =findViewById(R.id.iv_AS_back);
 
         arrayList = new ArrayList<String>();
         arrayList.add("Select option");
@@ -87,14 +85,7 @@ public class AdminStateActivity extends AppCompatActivity {
             }
         });
 
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AdminStateActivity.this,AdminActivity.class));
-            }
-        });
     }
 
 
 }
-

@@ -52,12 +52,12 @@ public class AdminEditDetailsActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot i : dataSnapshot.getChildren()) {
                     Patients patients = i.getValue(Patients.class);
-                   if(patients.getName().equals(name) ){
+                    if(patients.getName().equals(name) ){
                         patients.setRes(result);
                         myRef.child(i.getKey()).setValue(patients);
                         Toast.makeText(getApplicationContext(),"Details Updated",Toast.LENGTH_SHORT).show();
                         break;
-                   }
+                    }
                 }
 
             }
@@ -69,4 +69,3 @@ public class AdminEditDetailsActivity extends AppCompatActivity {
         });
     }
 }
-

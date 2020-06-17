@@ -117,56 +117,19 @@
                 android:textColor="#0c0c0c"
                 android:textStyle="bold" />
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent">
-
-                <EditText
-                    android:id="@+id/et_add_date"
-                    android:layout_width="10dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10sp"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/et_user_pwd"
-                    android:gravity="center"
-                    android:hint=" date "
-                    android:textColor="#9a9a9a"
-                    android:textColorHint="#9a9a9a"
-                    android:inputType="number" />
-
-                <EditText
-                    android:id="@+id/et_add_month"
-                    android:layout_width="10dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10sp"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/et_user_pwd"
-                    android:gravity="center"
-                    android:hint=" month "
-                    android:textColor="#9a9a9a"
-                    android:textColorHint="#9a9a9a"
-                    android:inputType="number" />
-
-                <EditText
-                    android:id="@+id/et_add_year"
-                    android:layout_width="10dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10sp"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/et_user_pwd"
-                    android:gravity="center"
-                    android:hint=" year "
-                    android:textColor="#9a9a9a"
-                    android:textColorHint="#9a9a9a"
-                    android:inputType="number"
-                    />
-            </LinearLayout>
+            <EditText
+                android:id="@+id/et_add_joindate"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_user_pwd"
+                android:ems="10"
+                android:hint="Join Date"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#9a9a9a"
+                android:textColorHint="#9a9a9a" />
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -28,7 +28,7 @@
                 android:text="Edit COVID Cases"
                 android:layout_marginTop="40dp"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="#0c0c0c"
                 android:textSize="35dp"
                 android:textStyle="bold" />
 
@@ -42,7 +42,7 @@
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="20dp"
                     android:text="State Name :"
                     android:textColor="#fff"
                     android:textStyle="bold"
@@ -53,7 +53,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#fff" />
+                    android:layout_marginStart="40dp"
+                    android:textColor="#0c0c0c" />
             </LinearLayout>
 
             <LinearLayout
@@ -63,8 +64,8 @@
 
                 <TextView
                     android:layout_width="130dp"
-                    android:layout_height="58dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="20dp"
                     android:text="positive cases :"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -75,7 +76,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#fff" />
+                    android:layout_marginStart="40dp"
+                    android:textColor="#0c0c0c" />
             </LinearLayout>
 
             <LinearLayout
@@ -85,8 +87,8 @@
 
                 <TextView
                     android:layout_width="130dp"
-                    android:layout_height="58dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="20dp"
                     android:text="Recoverd cases :"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -97,7 +99,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#fff" />
+                    android:layout_marginStart="40dp"
+                    android:textColor="#0c0c0c" />
             </LinearLayout>
 
             <LinearLayout
@@ -108,7 +111,7 @@
                 <TextView
                     android:layout_width="130dp"
                     android:layout_height="58dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="20dp"
                     android:text="Death :"
                     android:textColor="#fff"
                     android:textSize="20dp"
@@ -119,14 +122,15 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#fff" />
+                    android:layout_marginStart="40dp"
+                    android:textColor="#0c0c0c" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/bt_AUC_update"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/sign_in_button"
                 android:padding="15dp"

@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 public class AdminChooseActivity extends AppCompatActivity {
 
     private TextView tv_username, tv_email, tv_mobile, tv_joinAt;
+    private Button edit;
     private DatabaseReference myRef;
 
     @Override
@@ -30,8 +31,9 @@ public class AdminChooseActivity extends AppCompatActivity {
         tv_email = findViewById(R.id.tv_AC_mail);
         tv_mobile = findViewById(R.id.tv_AC_phnnum);
         tv_joinAt = findViewById(R.id.tv_AC_joinAt);
+        edit = findViewById(R.id.bt_admchs_edtdet);
 
-        myRef= FirebaseDatabase.getInstance().getReference("Patients");
+        /*myRef= FirebaseDatabase.getInstance().getReference("Patients");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -42,23 +44,22 @@ public class AdminChooseActivity extends AppCompatActivity {
                         tv_email.setText(patients.getMail());
                         tv_mobile.setText(patients.getPhone());
                         tv_joinAt.setText(patients.getJoin());
-
                     }
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
-
-
-
-
     }
     public void updateDetails(View view){
         startActivity(new Intent(AdminChooseActivity.this,AdminEditDetailsActivity.class));
-
+    }*/
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminChooseActivity.this,AdminEditDetailsActivity.class));
+            }
+        });
     }
 }

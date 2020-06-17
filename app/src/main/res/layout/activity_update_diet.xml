@@ -15,154 +15,152 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:padding="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
 
 
-        <ImageView
-            android:id="@+id/iv_UD_back"
-            android:layout_width="55dp"
-            android:layout_height="67dp"
-            android:background="#bce0db"
-            app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
-
-    <TextView
-        android:id="@+id/tv_update_diet_key"
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:text=" "
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_update_diet_line"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diet Plan"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
+                <TextView
+                    android:id="@+id/tv_update_diet_key"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:layout_height="70dp"
+                    android:text=" "
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_UD_BF"
-                android:layout_width="110dp"
+                android:id="@+id/tv_update_diet_line"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="50dp"
-                android:text="Breakfast :"
+                android:text="Diet Plan"
+                android:textAlignment="center"
+                android:textColor="#0c0c0c"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_UD_BF"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:text="Breakfast :"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/et_UD_BF"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:textSize="20dp"
+                    android:textColor="#0c0c0c" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_UD_LUN"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:text="Lunch :"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/et_UD_LUN"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:textSize="20dp"
+                    android:textColor="#0c0c0c" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_UD_SNK"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:text="Snacks :"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/et_UD_SNK"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:textSize="20dp"
+                    android:textColor="#0c0c0c" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_UD_DIN"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:text="Dinner :"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/et_UD_DIN"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:textSize="20dp"
+                    android:textColor="#0c0c0c" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_UD_update"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/sign_in_button"
+                android:padding="15dp"
+                android:text="UPDATE"
                 android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="20dp" />
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <EditText
-                android:id="@+id/et_UD_BF"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#fff" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/tv_UD_LUN"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="50dp"
-                android:text="Lunch :"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/et_UD_LUN"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#fff" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/tv_UD_SNK"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="50dp"
-                android:text="Snacks :"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/et_UD_SNK"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#fff" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/tv_UD_DIN"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="50dp"
-                android:text="Dinner :"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/et_UD_DIN"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#fff" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/bt_UD_update"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/sign_in_button"
-            android:padding="15dp"
-            android:text="UPDATE"
-            android:textColor="#fff"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
