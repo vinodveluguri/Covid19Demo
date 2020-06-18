@@ -55,10 +55,10 @@
 
                 <TextView
                     android:id="@+id/tv_UD_BF"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="10dp"
                     android:text="Breakfast :"
                     android:textColor="#fff"
                     android:textStyle="bold"
@@ -66,9 +66,9 @@
 
                 <EditText
                     android:id="@+id/et_UD_BF"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
                     android:textSize="20dp"
                     android:textColor="#0c0c0c" />
             </LinearLayout>
@@ -80,10 +80,10 @@
 
                 <TextView
                     android:id="@+id/tv_UD_LUN"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="10dp"
                     android:text="Lunch :"
                     android:textColor="#fff"
                     android:textStyle="bold"
@@ -91,9 +91,9 @@
 
                 <EditText
                     android:id="@+id/et_UD_LUN"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
                     android:textSize="20dp"
                     android:textColor="#0c0c0c" />
             </LinearLayout>
@@ -105,10 +105,10 @@
 
                 <TextView
                     android:id="@+id/tv_UD_SNK"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="10dp"
                     android:text="Snacks :"
                     android:textColor="#fff"
                     android:textStyle="bold"
@@ -116,9 +116,9 @@
 
                 <EditText
                     android:id="@+id/et_UD_SNK"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
                     android:textSize="20dp"
                     android:textColor="#0c0c0c" />
             </LinearLayout>
@@ -130,10 +130,10 @@
 
                 <TextView
                     android:id="@+id/tv_UD_DIN"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="10dp"
                     android:text="Dinner :"
                     android:textColor="#fff"
                     android:textStyle="bold"
@@ -141,9 +141,9 @@
 
                 <EditText
                     android:id="@+id/et_UD_DIN"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
                     android:textSize="20dp"
                     android:textColor="#0c0c0c" />
             </LinearLayout>

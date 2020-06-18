@@ -15,13 +15,14 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class User1Activity extends AppCompatActivity {
 
     private EditText et1,et2;
     private Button bt2;
     private TextView tv3;
-    String email,password,ename1;
+    String email,password;
     private FirebaseAuth mAuth;
 
     @Override
@@ -42,6 +43,13 @@ public class User1Activity extends AppCompatActivity {
                 email=et1.getText().toString().trim();
                 password=et2.getText().toString().trim();
 
+                if(email.equals("theadmin123@gmail.com") && password.equals("admin@123")){
+
+                    Toast.makeText(getApplicationContext(),"WELCOME TO THE ADMIN",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(User1Activity.this,AdminActivity.class);
+                    startActivity(intent);
+                }
+
                 if(validate(email,et1) && validate(password,et2)){
                     loginUser(email,password);
                 }
@@ -61,17 +69,16 @@ public class User1Activity extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
 
-                if(email.equals("theadmin123@gmail.com") && password.equals("admin@123")){
-
+                /*if(email.equals("theadmin123@gmail.com") && password.equals("admin@123")){
                     Toast.makeText(getApplicationContext(),"WELCOME TO THE ADMIN",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(User1Activity.this,AdminActivity.class);
                     startActivity(intent);
-                }
-                else {
-                    Toast.makeText(getApplicationContext()," WELCOME ",Toast.LENGTH_LONG).show();
-                    Intent it = new Intent(User1Activity.this, PatientDetailsActivity.class);
-                    startActivity(it);
-                }
+                }*/
+
+                Toast.makeText(getApplicationContext()," WELCOME ",Toast.LENGTH_LONG).show();
+                Intent it = new Intent(User1Activity.this, PatientDetailsActivity.class);
+                startActivity(it);
+
 
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -89,4 +96,13 @@ public class User1Activity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null){
+            Intent it = new Intent(User1Activity.this, PatientDetailsActivity.class);
+            startActivity(it);
+        }
+    }
 }

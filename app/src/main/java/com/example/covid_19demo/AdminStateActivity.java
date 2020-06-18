@@ -37,6 +37,8 @@ public class AdminStateActivity extends AppCompatActivity {
         arrayList.add("Assam");
         arrayList.add("Bihar");
         arrayList.add("Chhattisgarh");
+        arrayList.add("Chandigarh");
+        arrayList.add("Delhi");
         arrayList.add("Goa");
         arrayList.add("Gujarat");
         arrayList.add("Haryana");

@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_marginTop="10dp"
             android:padding="20dp">
 
             <TextView
@@ -28,6 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="Edit Patient Detials"
                 android:layout_marginTop="40dp"
+                android:layout_marginBottom="120dp"
                 android:textAlignment="center"
                 android:textColor="#0c0c0c"
                 android:textSize="35dp"
@@ -74,13 +76,37 @@
                     android:textStyle="bold"
                     android:textSize="22dp" />
 
-                <EditText
+                <!--<EditText
                     android:id="@+id/et_AED_status"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:textSize="20dp"
-                    android:textColor="#0c0c0c" />
+                    android:textColor="#0c0c0c" />-->
+                <RadioGroup
+                    android:id="@+id/btngrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rad_AED_pos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginStart="40dp"
+                        android:text="Positive"
+                        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/rad_AED_neg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginStart="40dp"
+                        android:text="Negative"
+                        android:textSize="20sp"/>
+                </RadioGroup>
             </LinearLayout>
 
             <Button

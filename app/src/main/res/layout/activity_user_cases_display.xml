@@ -40,13 +40,12 @@
 
             </LinearLayout>
 
-
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="STAY HOME ... STAY SAFE"
-                android:layout_marginBottom="140dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
                 android:textAlignment="center"
                 android:textColor="#244376"
                 android:textSize="25dp"
@@ -62,20 +61,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="40dp"
-                    android:text="Positive Cases        : "
+                    android:text="Total          :"
                     android:textColor="#fff"
                     android:textStyle="bold"
                     android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/tv_UCD_posCase"
-                    android:layout_width="135dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginStart="20dp"
                     android:text="  "
                     android:textColor="#0c0c0c"
-                    android:textStyle="italic"
+                    android:textStyle="bold"
                     android:textSize="25dp" />
             </LinearLayout>
 
@@ -89,10 +88,36 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="40dp"
-                    android:text="Recoverd : "
+                    android:text="Active        :"
                     android:textColor="#fff"
                     android:textStyle="bold"
                     android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/tv_active"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="  "
+                    android:textColor="#0c0c0c"
+                    android:textStyle="bold"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Recoverd  :"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_UCD_reco"
@@ -102,8 +127,11 @@
                     android:layout_marginTop="10dp"
                     android:text="  "
                     android:textColor="#0c0c0c"
-                    android:textStyle="italic"
-                    android:textSize="25dp" /> />
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+
+                />
             </LinearLayout>
 
             <LinearLayout
@@ -117,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="40dp"
-                    android:text="Death        : "
+                    android:text="Death         :"
                     android:textColor="#fff"
                     android:textStyle="bold"
                     android:textSize="25dp" />
@@ -129,9 +157,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="20dp"
                     android:text="  "
-                    android:textStyle="italic"
+                    android:textStyle="bold"
                     android:textColor="#0c0c0c"
                     android:textSize="25dp" />
+
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

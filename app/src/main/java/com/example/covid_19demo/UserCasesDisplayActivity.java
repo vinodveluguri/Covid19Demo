@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UserCasesDisplayActivity extends AppCompatActivity {
 
-    private TextView tv_pos, tv_rec, tv_dead;
+    private TextView tv_pos, tv_rec, tv_dead,tv_active;
     private TextView tv_state;
     private DatabaseReference myRef;
     String sm;
@@ -35,6 +35,7 @@ public class UserCasesDisplayActivity extends AppCompatActivity {
         tv_rec = findViewById(R.id.tv_UCD_reco);
         tv_dead = findViewById(R.id.tv_UCD_death);
         tv_state = findViewById(R.id.tv_UCD_key);
+        tv_active = findViewById(R.id.tv_active);
 
         sm = getIntent().getStringExtra("selectDay");
         myRef = FirebaseDatabase.getInstance().getReference("Cases");
@@ -49,6 +50,9 @@ public class UserCasesDisplayActivity extends AppCompatActivity {
                         tv_pos.setText(cases.getPositive());
                         tv_rec.setText(cases.getRecovery());
                         tv_dead.setText(cases.getDeaths());
+                        int Active = (Integer.parseInt(cases.getPositive()))-((Integer.parseInt(cases.getDeaths()))+(Integer.parseInt(cases.getRecovery())));
+                        String act = String.valueOf(Active);
+                        tv_active.setText(act);
                         //tv_din.setText(cases.getDinner());
                     }
                 }

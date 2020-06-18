@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,9 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AdminEditDetailsActivity extends AppCompatActivity {
 
-    private EditText et_name, et_res;
+    private EditText et_name;
     private Button btn_update;
     private DatabaseReference myRef;
+    private RadioButton radneg, radpos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,8 @@ public class AdminEditDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_edit_details);
 
         et_name = findViewById(R.id.et_AED_name);
-        et_res = findViewById(R.id.et_AED_status);
+        radneg = findViewById(R.id.rad_AED_neg);
+        radpos = findViewById(R.id.rad_AED_pos);
         btn_update = findViewById(R.id.bt_AED_update);
         myRef = FirebaseDatabase.getInstance().getReference("Patients");
 
@@ -41,22 +44,28 @@ public class AdminEditDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = et_name.getText().toString();
-                String result = et_res.getText().toString();
+                String positive = radpos.getText().toString();
+                String negative = radneg.getText().toString();
 
                 String uid = FirebaseAuth.getInstance().getUid();
-                updateDetails(name, result);
+                updateDetails(name,positive,negative);
             }
         });
     }
 
-    public void updateDetails(final String name, final String result) {
+    public void updateDetails(final String name, final String positive, final String negative) {
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot i : dataSnapshot.getChildren()) {
                     Patients patients = i.getValue(Patients.class);
                     if(patients.getName().equals(name) ){
-                        patients.setRes(result);
+                        if(radpos.isChecked()) {
+                            patients.setRes(positive);
+                        }
+                        if(radneg.isChecked()) {
+                            patients.setRes(negative);
+                        }
                         myRef.child(i.getKey()).setValue(patients);
                         Toast.makeText(getApplicationContext(),"Details Updated",Toast.LENGTH_SHORT).show();
                         break;
