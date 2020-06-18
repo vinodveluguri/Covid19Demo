@@ -93,6 +93,7 @@ public class AddActivity extends AppCompatActivity {
                 et_date.setText("");
                 et_join.setText("");
                 et_mail.setText("");
+                //Problem with this
                 if(btngrp!=null) {
                     btngrp.clearCheck();
                 }

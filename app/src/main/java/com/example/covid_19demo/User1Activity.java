@@ -69,12 +69,6 @@ public class User1Activity extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
 
-                /*if(email.equals("theadmin123@gmail.com") && password.equals("admin@123")){
-                    Toast.makeText(getApplicationContext(),"WELCOME TO THE ADMIN",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(User1Activity.this,AdminActivity.class);
-                    startActivity(intent);
-                }*/
-
                 Toast.makeText(getApplicationContext()," WELCOME ",Toast.LENGTH_LONG).show();
                 Intent it = new Intent(User1Activity.this, PatientDetailsActivity.class);
                 startActivity(it);
@@ -89,7 +83,7 @@ public class User1Activity extends AppCompatActivity {
         });
     }
     private boolean validate(String string, EditText editText) {
-        if(string.isEmpty()){
+        if (string.isEmpty()) {
             editText.setError("Please Fill This Field...");
             return false;
         }
