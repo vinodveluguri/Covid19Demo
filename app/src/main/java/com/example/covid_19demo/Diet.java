@@ -8,7 +8,7 @@ public class Diet {
     }
 
     public Diet(String breakfast, String lunch, String snack, String dinner) {
-        this.breakfast = breakfast;
+        this.breakfast = breakfast; // can you please add more information
         this.lunch = lunch;
         this.snack = snack;
         this.dinner = dinner;
