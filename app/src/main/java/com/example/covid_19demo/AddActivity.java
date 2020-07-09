@@ -100,6 +100,8 @@ public class AddActivity extends AppCompatActivity {
 
             }
         });
+        
+        //sdigvsd kn
 
         et_date.setOnClickListener(new View.OnClickListener() {
             @Override
